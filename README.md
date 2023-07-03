@@ -9,10 +9,10 @@ title: Dependencies Graph
 ---
 
 graph TD
-  Runs:::root --> Preliminaries
+  Runs:::root -.-> Preliminaries
   classDef root fill:#f99
-  Preliminaries --> Definitions
-  Preliminaries --> workspace:::work
+  Preliminaries -.-> Definitions
+  Preliminaries -.-> workspace:::work
   classDef work fill:#0f0
-  Definitions --> workspace
+  Definitions -.-> workspace
 ```
