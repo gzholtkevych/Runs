@@ -1,0 +1,6 @@
+-R . Runs
+-arg -w
+-arg all
+Preliminaries.v
+Defrinitions.v
+Examples.v
