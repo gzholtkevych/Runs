@@ -6,17 +6,15 @@ Require Import Runs.Definitions.
 
 Section Counter.
 
-  Definition oneNameSet : NameSet.
-  Proof. exists [0]. constructor. Defined.
-
-  Let oneTick := Tick oneNameSet.
-  Let onePre := fun t1 t2 : oneTick => idx t1 < idx t2.
-  Let oneSync := fun t1 t2 : oneTick => name t1 = name t2 /\ idx t1 = idx t2.
+  Let oneNameSet : NameSet. Proof. exists [0]. constructor. Defined.
+  Let oneTickset := Tick oneNameSet.
+  Let onePre := fun x y : oneTickset => idx x < idx y.
+  Let oneSync := fun x y : oneTickset => name x = name y /\ idx x = idx y.
 
   Let O_in_oneNameSet : In 0 oneNameSet.
   Proof. now left. Qed.
 
-  Let init := fix init (n : nat) : list oneTick :=
+  Let init := fix init (n : nat) : list oneTickset :=
      match n with
        0    => []
      | S n' =>

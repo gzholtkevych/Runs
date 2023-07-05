@@ -9,17 +9,13 @@ Section Relations.
 
   Variable R : Relation.
 
-  Inductive Reflexive : Prop := 
-    reflexivity : forall x:U, R x x -> Reflexive.
+  Definition Reflexive : Prop := forall x : U, R x x.
 
-  Inductive Irreflexive : Prop := 
-    irreflexivity : forall x:U, ~ R x x -> Irreflexive.
+  Definition Irreflexive : Prop := forall x : U, ~ R x x.
 
-  Inductive Transitive : Prop := 
-    transitivity : forall x y z:U, R x y -> R y z -> R x z -> Transitive.
+  Definition Transitive : Prop := forall x y z : U, R x y -> R y z -> R x z.
 
-  Inductive Symmetric : Prop :=
-    symmetry : forall x y:U, R x y -> R y x -> Symmetric.
+  Definition Symmetric : Prop := forall x y : U, R x y -> R y x.
 
   Inductive StrictOrder : Prop :=
     sord_rel : Irreflexive -> Transitive -> StrictOrder.
