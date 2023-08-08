@@ -1,3 +1,6 @@
 [submodule "Runs"]
 	path = Runs
 	url = https://github.com/gzholtkevych/Runs
+[submodule "NatFiniteSubsets"]
+	path = NatFiniteSubsets
+	url = ../NatFiniteSubsets
