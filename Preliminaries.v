@@ -31,9 +31,3 @@ Arguments Symmetric {U} (R).
 Arguments StrictOrder {U} (R).
 Arguments Equivalence {U} (R).
 
-
-Inductive increasing : list nat -> Prop :=
-    inc0 : increasing []
-  | inc1 : forall n, increasing [n]
-  | incS : forall n m ns, 
-             n < m -> increasing (m :: ns) -> increasing (n :: m :: ns).

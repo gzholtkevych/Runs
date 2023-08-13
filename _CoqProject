@@ -4,3 +4,5 @@
 Preliminaries.v
 Defrinitions.v
 Examples.v
+NatFiniteSubsets/Prelude.v
+NatFiniteSubsets/Definitions.v
