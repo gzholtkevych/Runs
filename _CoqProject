@@ -2,7 +2,8 @@
 -arg -w
 -arg all
 Preliminaries.v
-Defrinitions.v
+Definitions.v
 Examples.v
 NatFiniteSubsets/Prelude.v
 NatFiniteSubsets/Definitions.v
+NatFiniteSubsets/Facts.v

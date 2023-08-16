@@ -1,5 +1,7 @@
 Require Import Lists.List.
 Import ListNotations.
+Require Export Runs.NatFiniteSubsets.Definitions.
+Require Export Runs.NatFiniteSubsets.Facts.
 
 
 Section Relations.

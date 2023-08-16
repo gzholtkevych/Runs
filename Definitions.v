@@ -8,10 +8,11 @@ Require Export Runs.Preliminaries.
    identifying an event source. The condition of the ascendance ensures
    one-to-one correspondence between ascending lists and finite sets.
    -------------------------------------------------------------------------- *)
+(*
 Definition NameSet : Set := { names : list nat | increasing names }.
 Coercion toList := fun s : NameSet => proj1_sig s.
-
-Record Tick (base : NameSet) : Set := declareTick {
+*)
+Record Tick (base : NatFinSubset) : Set := declareTick {
   name : nat;  (* name of the tick source *)
   idx  : nat;  (* nmber of the tick       *)
   name_in_base : In name base
@@ -20,7 +21,7 @@ Arguments name {base}.
 Arguments idx {base}. 
 
 Section aRun.
-  Variable base : NameSet.
+  Variable base : NatFinSubset.
   Let tickset := Tick base.
   Variables pre sync : Relation tickset.
 
@@ -37,7 +38,7 @@ Section aRun.
 End aRun.
 
 Structure Run := declareRun {
-  base : NameSet;
+  base : NatFinSubset;
   tickset := Tick base;
   pre : Relation tickset;
   sync : Relation tickset;
