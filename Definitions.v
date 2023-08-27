@@ -12,7 +12,7 @@ Require Export Runs.Preliminaries.
 Definition NameSet : Set := { names : list nat | increasing names }.
 Coercion toList := fun s : NameSet => proj1_sig s.
 *)
-Record Tick (base : NatFinSubset) : Set := declareTick {
+Record Tick (base : NameSet) : Set := declareTick {
   name : nat;  (* name of the tick source *)
   idx  : nat;  (* nmber of the tick       *)
   name_in_base : In name base
@@ -21,7 +21,7 @@ Arguments name {base}.
 Arguments idx {base}. 
 
 Section aRun.
-  Variable base : NatFinSubset.
+  Variable base : NameSet.
   Let tickset := Tick base.
   Variables pre sync : Relation tickset.
 
@@ -38,7 +38,7 @@ Section aRun.
 End aRun.
 
 Structure Run := declareRun {
-  base : NatFinSubset;
+  base : NameSet;
   tickset := Tick base;
   pre : Relation tickset;
   sync : Relation tickset;

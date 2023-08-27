@@ -1,7 +1,7 @@
 Require Import Lists.List.
+Require Import Runs.Definitions.
 Import ListNotations.
 Require Import Arith.Lt.
-Require Import Runs.Definitions.
 
 
 Section Counter.
