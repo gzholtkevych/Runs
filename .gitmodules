@@ -1,0 +1,3 @@
+[submodule "NameSets"]
+	path = NameSets
+	url = https://github.com/gzholtkevych/NameSets
