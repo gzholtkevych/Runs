@@ -1,6 +1,0 @@
-[submodule "Runs"]
-	path = Runs
-	url = https://github.com/gzholtkevych/Runs
-[submodule "NameSets"]
-	path = NameSets
-	url = ../NameSets
