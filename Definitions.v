@@ -41,7 +41,7 @@ Structure Run := declareRun {
   certRun : aRun base pre sync 
 }.
 
-Notation "x 'pre' y" := (pre _ x y)  (at level 70).
+Notation "x 'pre' y" := (pre _ x y)    (at level 70).
 Notation "x 'sync' y" := (sync _ x y)  (at level 70).
 Notation "x 'conc' y" := (conc _ x y)  (at level 70).
 
